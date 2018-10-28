@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main_layout"
+    android:layout_height="match_parent"
+    tools:context=".Game">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/tilte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/start_badge"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Best Moves : 15"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="casual"
+            android:layout_marginRight="32dp"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_tiles"
+        android:layout_width="316dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/wood_texture_low"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:onClick="restartGame"
+            android:id="@+id/imageView8"
+            android:layout_width="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/restart" />
+
+        <TextView
+            android:id="@+id/moves"
+            android:layout_width="wrap_content"
+            android:fontFamily="casual"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:layout_alignParentRight="true"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:paddingTop="8dp"
+            android:layout_marginRight="36dp"
+            tools:text="Moves : 15" />
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
