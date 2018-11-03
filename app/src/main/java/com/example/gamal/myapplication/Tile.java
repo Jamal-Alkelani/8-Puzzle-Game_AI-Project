@@ -4,6 +4,10 @@ public class Tile {
     private int number;
     private int position;
 
+    public Tile(int number) {
+        this.number = number;
+    }
+
     public int getNumber() {
         return number;
     }
